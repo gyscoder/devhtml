@@ -1,0 +1,48 @@
+documentação prévia
+
+cores retiradas da logo:
+    #221715
+    #A62103
+    #0468BF
+    #F20530
+    #F2071B
+
+site v0.1_prototipo:
+    -implementada API do facebook para rodar o Messenger da página do facebook do site no site
+    -menu:
+        - logo>#menu3-0
+        - sobre nós>#features13-j
+        - serviços>#features3-9
+        - contato>#contacts1-f
+        - produtos>features4-4
+        - entre em contato conosco: (19) 00000-0000
+        - logo-facebook
+        - logo-twitter
+        - logo-instagram
+
+    -Header:
+        - apresentação da empresa
+    -Sobre nós:
+        -apresenta os serviços:
+            -apresenta os serviços com descrição
+
+    -Produtos
+        -apresenta os produtos da loja com descrição e valor com link para loja externa
+
+    -Galeria:
+        -galeria de fotos
+
+    -Contatos:
+        -contatos via facebook, celular/whatsapp, telefone informando os horários de atendimento
+
+    -Fale Conosco:
+        -contatos via email e nome
+        
+    -Localizações:
+        -local das lojas
+    
+    -Parceiros:
+        -logos de Parceiros
+
+    -Footer:
+        -informa whatsapp, telefone e email, links de algumas redes sociais (facebook, twitter, instagram) e copyright
