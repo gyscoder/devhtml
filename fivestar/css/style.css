@@ -1,0 +1,85 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+    min-height: 100%;
+}
+body{
+	background-image: url("https://wallpaperplay.com/walls/full/c/5/3/34778.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	max-height: auto;
+	display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+footer{
+	position: absolute;
+	width: 100%;
+	margin-top: auto;
+	z-index: 1;
+	bottom: 0px;
+	text-align: center;
+
+}
+#principal{
+	display: block;
+	text-align: center;
+}
+#titulo{
+	margin-top: 1%;
+	background-color: #6170CB;
+	background-image: linear-gradient(to bottom, #4B1A6B, #4E2A8B);
+	display: block;
+	border: 2px solid white;
+	border-radius: 5%;
+	float: left;
+	margin-left: 5%;
+	height: 200px;
+	width: 40%;
+	animation: titulo 5s infinite;
+
+}
+
+#titulo1{
+	margin-top: 1%;
+	background-color: #6170CB;
+	background-image: linear-gradient(to bottom, #4B1A6B, #4E2A8B);
+	display:block;
+	float: right;
+	border: 2px solid white;
+	border-radius: 5%;
+	margin-right: 5%;
+	height: 200px;
+	width: 40%;
+	animation: titulo1 5s infinite;
+}
+.textotit{
+	margin: 5px 5px 5px 5px;
+	text-align: center;
+	color: black;
+}
+.subtitulo, .subtitulo1{
+	padding-top: 2%;
+	text-align: center;
+}
+
+@media (max-width: 600px) {
+}
+
+@keyframes titulo{
+	50% {box-shadow: 1px 1px 200px #430838;
+		 margin-top: 10px;
+		 margin-bottom: 10px;
+		 margin-right: 2%;}
+}
+@keyframes titulo1{
+	50% {box-shadow: 1px 1px 200px #430838;
+		 margin-top: 10px;
+		 margin-bottom: 10px;
+		 margin-left: 2%;}
+}

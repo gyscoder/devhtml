@@ -1,0 +1,69 @@
+<?php
+$server = 'fdb28.runhosting.com';
+$user = '3555123_wpress6b018b8f';
+$passwd = 'DNiqd8U#2tFyg.9}';
+$banco = '3555123_wpress6b018b8f';
+try{
+$conexao = new PDO("mysql:host=$server;dbname=$banco", $user, $passwd);
+$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $erro){
+echo "<h1> [+] Acho que algo deu errado [+] </h1>";
+echo "<p> [+] Segue o erro: {$erro->getMessage()} [+]</p>";
+$conexao = null;
+}
+echo '<section class="elementor-element elementor-element-9bc8fe9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9bc8fe9" data-element_type="section">';
+				echo '<div class="elementor-container elementor-column-gap-default">';
+								echo '<div class="elementor-element elementor-element-52805df elementor-column elementor-col-25 elementor-top-column" data-id="52805df" data-element_type="column">';
+												echo '<div class="elementor-widget-wrap">';
+												echo "</div>";
+								echo "</div>";
+								echo '<div class="elementor-element elementor-element-67c0b95 elementor-column elementor-col-50 elementor-top-column" data-id="67c0b95" data-element_type="column">';
+												echo '<div class="elementor-widget-wrap elementor-element-populated">';
+																echo '<div class="elementor-element elementor-element-a5fdc8f elementor-widget elementor-widget-html" data-id="a5fdc8f" data-element_type="widget" data-widget_type="html.default">';
+																				echo '<div class="elementor-widget-container">';
+																								
+																								echo '<table border="1" style="width:50%">';
+																												echo "<thead>";
+																																echo "<tr>";
+																																				echo "<th>NOME</th>";
+																																				echo "<th>SOBRENOME</th>";
+																																				echo "<th>Número</th>";
+																																				echo "<th>Disparo</th>";
+																																				echo "<th>Ligação</th>";
+																																				echo "<th>Usuario</th>";
+																																				echo "<th>Cidade</th>";
+																																				echo "<th>Data/hora</th>";
+																																echo "</tr>";
+																												echo "</thead>";
+																												echo "<tbody>";
+																								
+																								$pesquisa = $_POST['Cidade'];
+																								$query = $conexao->prepare("SELECT * FROM wp_users WHERE cidade = '$pesquisa'");
+																								$query->execute();
+																								
+																								$usuario = $query->fetchAll(PDO::FETCH_ASSOC);
+																								for ($i = 0; $i < sizeof($usuario); $i++):
+																								$usuarioAtual = $usuario[$i];
+																
+																echo "<tr>";
+																		echo "<td>" echo $usuarioAtual["first_name"]; echo "</td>";
+																		echo "<td>" echo $usuarioAtual["last_name"]; echo "</td>";
+																		echo "<td>" echo $usuarioAtual["number_box_1598501690"]; echo "</td>";
+																		echo "<td>" echo $usuarioAtual["radio_1598501697"]; echo "</td>";
+																		echo "<td>" echo $usuarioAtual["radio_1598502190797"]; echo "</td>";
+																		echo "<td>" echo $usuarioAtual["input_box_1598504582"]; echo "</td>";
+																		echo "<td>" echo $usuarioAtual["cidade"]; echo "</td>";
+																		echo "<td>" echo $usuarioAtual["user_registered"];  echo "</td>";
+																echo "</tr>";
+																endfor;
+														echo "</tbody>";
+												echo "</div>";
+										echo "</div>";
+								echo "</div>";
+						echo "</div>";
+						echo '<div class="elementor-element elementor-element-d2010bc elementor-column elementor-col-25 elementor-top-column" data-id="d2010bc" data-element_type="column">';
+								echo '<div class="elementor-widget-wrap">';
+								echo "</div>";
+						echo "</div>";
+				echo "</div>";
+		echo "</section>";

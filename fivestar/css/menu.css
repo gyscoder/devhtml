@@ -1,0 +1,81 @@
+  body {
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  #navbar ul {
+	background-image: linear-gradient(to right, #4F1D76, #430838);
+	list-style: none;
+	box-shadow: 1px 0px 15px #430838;
+  }
+  #navbar ul li {
+	display: inline-block;
+	padding: 1rem;
+	position: relative;
+  }
+  #navbar ul li a {
+	text-decoration: none;
+	color: rgb(253, 135, 0);
+  }
+  /*Hide Nested ul by Default*/
+  #navbar ul li ul {
+	display: none;
+  }
+  #navbar ul li:hover {
+	background: coral;
+	color: #fff;
+  }
+  #navbar ul li:hover a {
+	color: #fff;
+  }
+  #navbar ul li:hover ul {
+	display: block;
+	position: absolute;
+	left: 0px;
+	width: 200px;
+	margin-top: 1rem;
+  }
+  #navbar ul li:hover ul li {
+	display: block;
+	background: #e7e7e7;
+  }
+  #navbar ul li:hover ul li a {
+	color: #333;
+  }
+  #navbar ul li:hover ul li:hover {
+	background: #e0e0e0;
+	color: #333;
+  }
+  #navbar ul li:hover ul li span {
+	float: right;
+	color: #fff;
+	background-color: coral;
+	padding: 0.2rem 0.5rem;
+	text-align: center;
+	font-size: 0.8rem;
+	border-radius: 5px;
+  }
+  #navbar ul li:hover ul li:hover span {
+	background: chocolate;
+  }
+  #showcase {
+	display: flex;
+	flex-direction: column;
+	height: 300px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: coral;
+  }
+  #showcase h1 {
+	color: #fff;
+	font-size: 4rem;
+  }
+  @media (max-width: 600px) {
+	#navbar ul li {
+	  display: block;
+	}
+	#navbar ul li:hover ul {
+	  width: 90%;
+	  position: relative;
+	}
+  }
